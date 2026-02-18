@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main      # Make sure this matches your Git branch
+
+media_folder: "images/uploads"    # where uploaded images will go
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"         # your root index.html
+        label: "Homepage"
+        name: "homepage"
+        fields:
+          - { label: "Full HTML", name: "body", widget: "code", modes: ["html"] }
